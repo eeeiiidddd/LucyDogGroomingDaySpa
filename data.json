@@ -1,0 +1,27 @@
+{
+  "businessName": "petbar Houston - Heights",
+  "contact": {
+    "address": "3120 White Oak Drive, Houston, TX 77007",
+    "phone": "346-571-2135",
+    "email": "INFO@PETBARINC.COM"
+  },
+  "hours": {
+    "mon_sat": "9:00AM – 6:00PM",
+    "sun": "9:00AM – 4:00PM"
+  },
+  "services": [
+    {
+      "title": "Dog Grooming",
+      "description": "Personal, one-on-one dog grooming in private rooms."
+    },
+    {
+      "title": "Full-Service Bath & Brush",
+      "description": "Premium service that leaves your dog smelling amazing."
+    },
+    {
+      "title": "Self-Service Wash",
+      "description": "Waist-high stainless steel tubs with everything you need provided."
+    }
+  ],
+  "about": "A family-owned business opened in June 2022 by Lisset and Julio Aular, dedicated to a low-stress environment for pets."
+}
