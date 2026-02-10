@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header layout and styling to match provided design */
+header {
+    background: #fff;
+    position: relative;
+}
+
+/* thin blue top stripe */
+header::before {
+    content: "";
+    display: block;
+    height: 8px;
+    background: #cfe9ff;
+}
+
+/* subtle bottom border */
+header::after {
+    content: "";
+    display: block;
+    height: 6px;
+    background: #9fc7ff;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-text { font-size: 28px; font-weight: 800; letter-spacing: 1px; }
+
+.main-nav .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.main-nav .nav-menu li a {
+    color: #16324a;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.main-nav .nav-menu li a .caret { font-size: 12px; margin-left: 6px; opacity: 0.8; }
+
+.main-nav .nav-menu li a:hover { color: #0b2740; }
+
+.hero {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.service-card {
+    width: 30%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
