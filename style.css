@@ -5,35 +5,15 @@ body {
 }
 
 /* Header layout and styling to match provided design */
+
+
 header {
-    background: #fff;
-    position: relative;
+    color: #931010;
+    padding: 10px 10;
+    text-align: center;
+    
 }
 
-/* thin blue top stripe */
-header::before {
-    content: "";
-    display: block;
-    height: 8px;
-    background: #cfe9ff;
-}
-
-/* subtle bottom border */
-header::after {
-    content: "";
-    display: block;
-    height: 6px;
-    background: #9fc7ff;
-}
-
-.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 20px;
-}
 
 .logo {
     display: flex;
@@ -65,6 +45,8 @@ header::after {
 .main-nav .nav-menu li a .caret { font-size: 12px; margin-left: 6px; opacity: 0.8; }
 
 .main-nav .nav-menu li a:hover { color: #0b2740; }
+
+
 
 .hero {
     background-color: #f4f4f4;
