@@ -1,3 +1,18 @@
+header {
+    text-align: center;
+    background-color: rgb(209, 18, 37);
+     font-family: "Times new Roman", serif;
+     
+}
+/* Header layout */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo on left, nav on right */
+    max-width: 100%;
+    padding: 12px 20px;
+    position: relative;
+}
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -5,60 +20,37 @@ body {
     padding: 0;
     margin: 0;
 }
-
-header {
-    padding: 15px;
-    text-align: center;
-    background-color: rgb(209, 18, 37);
-     font-family: "Times new Roman", serif;
-}
-
-/* Header layout */
-.header {
-    max-width: 1000px;    
-    align-items: center;
-    justify-content: center; /* center nav horizontally */
-    padding: 6px 20px;
-    position: relative;
-}
-
 .logo {
-    
-    align-items: right;
-    gap: 10px;
-    text-decoration: none;
-    align-self: left;
     display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
 }
-
 .logo-text { font-size: 28px; 
     font-weight: 800; 
     letter-spacing: 1px; 
     color: #fff;
     align-items: center;
 }
-
-.main-nav .nav-menu {
-    list-style: none;
-    padding: 0;
+/* Navigation styles */
+.nav-menu {
+    list-style: none; /* remove default list marker */
     display: flex;
     gap: 28px;
     align-items: center;
 }
-
-.main-nav .nav-menu li a {
+.nav-menu a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    align-items: center;
+    margin-right: 50px;
 }
+.nav-menu .caret { font-size: 12px; margin-left: 0px; opacity: 0.8; }
 
-.main-nav .nav-menu li a .caret { font-size: 12px; margin-left: 6px; opacity: 0.8; }
-
-.main-nav .nav-menu li a:hover { color: #0b2740; }
+.nav-menu a:hover { color: #0b2740; }
 
 
 

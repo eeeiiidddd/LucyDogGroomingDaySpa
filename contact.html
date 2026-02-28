@@ -4,13 +4,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Contact — Lucy Dog Grooming Day Spa</title>
-		<link rel="stylesheet" href="LucyDogGroomingDaySpa/style.css">
+		<link rel="stylesheet" href="style.css">
 		<style>
 			:root{--accent:#b75b3a;--muted:#666}
-			body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:#fff}
+			/* keep contact form specific rules here */
+			body{background:#fff}
 			.container{max-width:900px;margin:3rem auto;padding:1rem}
-			header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
-			header a{color:var(--accent);text-decoration:none;font-weight:600}
 			h1{margin:0 0 .25rem}
 			form{background:#fafafa;border:1px solid #eee;padding:1.25rem;border-radius:8px}
 			.row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
@@ -26,14 +25,20 @@
 		</style>
 	</head>
 	<body>
+		<header>
+			<div class="header">
+				<a href="index.html" class="logo"><span class="logo-text">Lucy's Dog Grooming & Day Spa</span></a>
+				<nav class="main-nav" aria-label="Primary">
+					<ul class="nav-menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="services.html">Services <span class="caret">▾</span></a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 		<div class="container">
-			<header>
-				<div>
-					<h1>Contact Us</h1>
-					<p style="margin:0;color:var(--muted)">Questions about grooming, pricing, or appointments?</p>
-				</div>
-				<a href="index.html">Home</a>
-			</header>
 
 			<main>
 				<form id="contactForm">
