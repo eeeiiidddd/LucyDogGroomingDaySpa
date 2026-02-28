@@ -10,7 +10,7 @@ header {
     align-items: center;
     justify-content: space-between; /* logo on left, nav on right */
     max-width: 100%;
-    padding: 12px 20px;
+    padding: 30px 30px;
     position: relative;
 }
 body {
@@ -26,8 +26,8 @@ body {
     text-decoration: none;
     gap: 10px;
 }
-.logo-text { font-size: 28px; 
-    font-weight: 800; 
+.logo-text { font-size: 35px; 
+    font-weight: 1000; 
     letter-spacing: 1px; 
     color: #fff;
     align-items: center;
@@ -44,11 +44,10 @@ body {
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 25px;
     letter-spacing: 1px;
     margin-right: 50px;
 }
-.nav-menu .caret { font-size: 12px; margin-left: 0px; opacity: 0.8; }
 
 .nav-menu a:hover { color: #0b2740; }
 
@@ -58,41 +57,124 @@ body {
     background-color: #f4f4f4;
     padding: 60px 20px;
     text-align: center;
+    font-size: 25px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .hero button {
-    background-color: #000;
+    background-color: rgb(209, 18, 37);
     color: #fff;
-    padding: 10px 20px;
+    padding: 30px 40px;
     border: none;
     cursor: pointer;
 }
-
-.services {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-}
-
-.service-card {
-    width: 30%;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-}
-
 footer {
     background: #222;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: 800px; /* Adjust height as needed */
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+/* Smooth scrolling for in-page anchors */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact form / content layout (merged from contact.html) */
+.container{max-width:900px;margin:3rem auto;padding:1rem}
+main{max-width:900px;margin:0 auto;padding:0}
+form{background:#fafafa;border:1px solid #eee;padding:1.25rem;border-radius:8px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.field{display:flex;flex-direction:column;margin-bottom:0.75rem}
+label{font-size:.9rem;margin-bottom:.35rem;color:#666}
+input,select,textarea{padding:.6rem;border:1px solid #ddd;border-radius:6px;font-size:1rem}
+textarea{min-height:110px;resize:vertical}
+.full{grid-column:1/-1}
+.actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.5rem}
+button{background:#b75b3a;color:#fff;border:none;padding:.6rem 1rem;border-radius:6px;cursor:pointer}
+button.secondary{background:#eee;color:#111}
+@media (max-width:640px){.row{grid-template-columns:1fr}}
+
+ul li {
+  display: inline-block; /* Aligns items horizontally and allows box model styling */
+  padding: 0 10px;       /* Adds some space between items */
+}
 
 
 
+.card-container {
+  display: flex; /* Enables flexbox layout for children */
+  justify-content: space-around; /* Distributes space evenly between cards */
+  gap: 200px; /* Adds space between the cards */
+}
 
-/* Header background when page is scrolled */
-header.scrolled {
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+.card {
+  flex: 1; /* Allows each card to grow and take equal space */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  max-width: 30%; /* Optional: limits the maximum width of each card */
 }
