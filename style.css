@@ -166,15 +166,50 @@ ul li {
 .card-container {
   display: flex; /* Enables flexbox layout for children */
   justify-content: space-around; /* Distributes space evenly between cards */
-  gap: 200px; /* Adds space between the cards */
+  gap: 20px; /* Adds space between the cards */
+  flex-wrap: wrap; /* wrap on small screens */
 }
 
 .card {
   flex: 1; /* Allows each card to grow and take equal space */
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
+  padding: 60px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: #f9f9f9;
   max-width: 30%; /* Optional: limits the maximum width of each card */
+  perspective: 800px; /* support for flipping */
+  min-height: 220px;
+}
+
+/* flip card styles */
+.flip-card {
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
 }
